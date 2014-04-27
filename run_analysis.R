@@ -26,7 +26,7 @@ std_index <- grep("std\\(\\)",features$V2)
 # append two list
 mean_std_index <-append(mean_index,std_index)
 
-# Extracts the measurements on the mean and standard
+# Extracts the measurements on the mean and standard devition
 data_mean_std <- data_total[,c(mean_std_index,562,563)]
 
 # get the names of mean() and std()
