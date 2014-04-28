@@ -48,6 +48,9 @@ library(reshape2)
 melt_data <-melt(data_mean_std,id=c("Activity","Subject"),measure.vars=c(names_mean_std))
 tidy_data <- dcast(melt_data, Activity+Subject ~ variable,mean)
 
+# export the data set
+write.table(tidy_data,"tidy_data.txt")
+
 
 
 
